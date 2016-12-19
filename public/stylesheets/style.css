@@ -1,8 +1,105 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+.navbar > div > a{
+     margin: 0px;
+     padding: 0px;
 }
 
-a {
-  color: #00B7FF;
+.navbar{
+     padding:10px;
+}
+
+.navbar > div{
+     margin-top:5px;
+     margin-left:2px;
+}
+
+.navbar > ul{
+     margin-left:50px;
+}
+
+div > ul > li{
+     display: inline-block;
+     padding:5px;
+     margin: 5px;
+     background-color: #0000ff;
+     color: white;
+     font-weight: bold;
+     font-size:14px;
+     border-radius: 5px;
+}
+
+div {
+     margin-top:10px;
+}
+
+.cross {
+     color:black
+     width: 4px;
+     height: 4px;
+     text-align: center;
+     font-family: sans-serif;
+}
+
+.cross:hover{
+     color:black;
+}
+
+.middle-main {
+     width: 75%;
+     margin-left: 12.5%;
+}
+
+.input-group-button { 
+     margin: 0px;
+     padding: 0px;
+}
+
+.h70{
+     height: 70px !important;
+}
+
+.pad0{
+     padding: 0px;
+}
+
+.marg0{
+     margin: 0px;
+}
+
+.sm-left-space{
+     margin-left: 10px;
+}
+
+.md-left-space{
+     margin-left:20px;
+}
+
+.small-top-marg{
+     margin-top: 5px;
+}
+.font-dhed{
+     font-size: 1.5em;
+}
+
+.blue-bg{
+     background-color: #f3f9fe !important;
+}
+
+.amazing-text {
+  text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+}
+
+footer{
+     margin-top:50px;
 }

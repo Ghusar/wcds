@@ -22,7 +22,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 var database = require('./database/index');
-database.connect();
+//database.connect();
 
 app.use('/', routes);
 app.use('/users', users);
