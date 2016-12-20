@@ -2,26 +2,70 @@
 <head>
     <% include head %>
 </head>
-<body class="container">
+<body>
 
-    <header>
-        <% include header %>
-    </header>
+<header>
+    <% include header %>
+</header>
 
-    <main>
-        <div class="jumbotron">
-            <h1>This is great</h1>
-            <p>Welcome to templating using EJS</p>
+<main>
+    <section class="container-fluid" id="one">
+        <div class="input-field col s6 oneclass">
+            <input id="searchfield" type="text" class="validate">
+            <i class="glyphicon glyphicon-remove"></i>
+            <ul>
+            </ul>
+            <label for="searchfield">Search here</label>
         </div>
-        <input type="text" id="searchfield" />
-        <button >Submit</button>
-    </main>
+        <div class="breadcrumb flat oneclass">
+        </div>
+        <div class="meraoutput">
+        </div>
+    </section>
+    <section id="two">
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="circle-search-icon.svg">
+                        <span class="card-title">Card Title</span>
+                    </div>
+                    <div class="card-content">
+                        <p>I am a very simple card. I am good at containing small bits of information.
+                            I am convenient because I require little markup to use effectively.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">This is a link</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m6">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="circle-search-icon.svg">
+                        <span class="card-title">Card Title</span>
+                    </div>
+                    <div class="card-content">
+                        <p>I am a very simple card. I am good at containing small bits of information.
+                            I am convenient because I require little markup to use effectively.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">This is a link</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
 
-    <footer>
-        <% include footer %>
-    </footer>
+<footer>
+    <% include footer %>
+</footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src ="/javascripts/custom.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src ="/javascripts/custom.js"></script>
 </body>
 </html>

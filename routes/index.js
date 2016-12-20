@@ -8,11 +8,18 @@ router.get('/', function(req, res) {
 });
 
 router.post('/data',function (req,res) {
+
       database.findit(req.body.input,function (err,data) {
             console.log(data);
             res.send({data:data});
 
       });
+});
+
+router.post('/search',function (req,res) {
+    var textQuery = database.getTrie(req.body.input);
+    //console.log(textQuery);
+    res.send({data:textQuery});
 });
 
 module.exports = router;
