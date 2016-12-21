@@ -1,6 +1,13 @@
 $(document).ready(function () {
     var array=['a'];
+    if($('.breadcrumb').children().length == 1) {
+        $('.breadcrumb').hide();
+        $('.breadcrumb > .close').hide();
+    }
+
     var sendit = function(query){
+        $('.breadcrumb').show();
+        $('.breadcrumb > .close').show();
         array.push(query);
         $('.meraoutput').empty();
         $.post("/data",
@@ -10,10 +17,10 @@ $(document).ready(function () {
             function(data){
             console.log(data.data);
             for(var x = 0;x<data.data.length;x++) {
-                    $('.meraoutput').append('<div class="card blue-grey darken-1 oneclass">' +
+                    $('.meraoutput').append('<div class="card oneclass">' +
                         '<div class="card-content white-text">' +
                         '<span class="card-title ">' + data.data[x].name + '</span>' +
-                        '<p>I am a very simple card. I am good at containing small bits of information.' +
+                        '<p class="card-text">I am a very simple card. I am good at containing small bits of information.' +
                         'I am convenient because I require little markup to use effectively.</p>' +
                         '</div>' +
                         '</div>');
@@ -43,6 +50,7 @@ $(document).ready(function () {
            }
         }
         array.splice(notedown+2);
+        sendit($(this).text());
         //console.log(array);
     });
 
@@ -94,20 +102,54 @@ $(document).ready(function () {
     });
 
     $('#searchIcon').click(function(){
-        $('nav').animate({height:'20%',fontSize:'35px',paddingTop:'25px'},300);
         $('#searchIcon').hide(300);
         $('#one').show(300);
         $('#two').hide(300);
 
     });
 
-    $('.input-field > i').click(function(){
+    $('.modal-header > .close,.modal-footer > .close').click(function(){
         $('#one').hide(300);
         $('#two').show(300);
         $('#searchIcon').show(300);
-        $('nav').animate({height:'30%',fontSize:'45px',paddingTop:'40px'},300);
+
+
+    });
+    $('.breadcrumb > .close').click(function () {
+        $('.breadcrumb').hide();
+        $('.breadcrumb > .close').hide();
+        array = ['a'];
+        $('.breadcrumb > a').remove();
+        $('.meraoutput').empty();
 
     });
 
+    $('.tabs > li').click(function () {
+        var c = $('.steps').children().get();
+        if($(this).data('no')=='1'){
+
+
+            $(c[0]).css('display','inline-block');
+            $(c[1]).css('display','inline-block');
+            $(c[2]).hide();
+            $(c[3]).hide();
+
+        }
+        else{
+            $(c[2]).css('display','inline-block');
+            $(c[3]).css('display','inline-block');
+            $(c[1]).hide();
+            $(c[0]).hide();
+        }
+    });
+
+    $(window).scroll(function () {
+
+       if($(document).scrollTop()>0){
+           $('nav').animate({ backgroundColor: "black" }, 300,function () {
+               
+           });
+       }
+    });
 });
 

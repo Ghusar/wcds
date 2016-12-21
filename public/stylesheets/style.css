@@ -4,35 +4,55 @@ body{
   width: 100%;
 }
 
-nav {
-  display: block;
-  height: 30%;
-  background: #3f51b5;
-  font-size: 50px;
-  color: white;
-  padding-top:40px;
+.modal{
+  top:10%;
 }
 
-nav > a{
-
-  display: block;
-  text-decoration: none;
-  text-align: center;
-  color: red;
+nav{
+  z-index: 5000;
+  position: fixed;
+  top:0;
+  height:20%;
+  fontSize:40px;
+  padding-top:30px;
+  padding-left: 150px;
+  background-color:transparent;
 }
 
-nav > a:hover{
-  text-decoration: none;
-  color:red;
+nav > span{
+  font-size: 45px;
+  color:white;
+  word-spacing:-10px;
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+}
+nav > span > span{
+  font-size: 80px;
+  color:#29b6f6;
+  word-spacing:-10px;
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
 }
 
+#two>div>div>span>span{
+  font-size:60px;
+  color:#29b6f6;
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+}
+#two>div>div>span{
+  font-size:40px;
+  color:black;
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+}
 #searchIcon{
+  padding-left: 45%;
+  display: block;
   z-index: 3000;
   width:100px;
   height:100px;
-  position: absolute;
-  left:90%;
-  top:22%;
+  font-size: 5em;
+  color:#29b6f6;
+}
+.aligc{
+  text-align: center;
 }
 
 #searchIcon:hover{
@@ -46,65 +66,190 @@ nav > a:hover{
   margin:15px 70px;
 }
 
-section > .input-field > input {
+section > div {
+  color:black;
+}
+
+ .input-field > input {
+  color:black;
   font-family: 'Josefin Slab';
   font-size: 35px;
   height: 60px;
   margin: 2px;
 }
 
-.input-field > i{
-  position: absolute;
-  top:1%;
-  right:-3.5%;
-}
 
-.input-field > i:hover{
-  color: blue;
-  cursor: pointer;
-}
+
+
 
 .input-field > ul{
   z-index:3000;
   position: absolute;
   width: 100%;
-  background-color: #808080;
+  background-color:whitesmoke;
   margin:0px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 .searchresult{
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-left: 5px;
+  width: 100%;
+  color:black;
   list-style: none;
   font-weight: bold;
   font-family: 'Josefin Slab';
-  text-align: center;
+  text-align: left;
   font-size: 35px;
   margin:0px;
 
 }
 
 .searchresult:hover{
+  color:black;
   cursor: pointer;
   background: white;
 }
 
 
-section > .input-field > label{
+ .input-field > label{
+  color:black;
   font-family: 'Josefin Slab';
   clear: both;
   font-size:35px;
 }
+ .card{
+   background-color: black;
+ }
+ .card-title{
+   color:#29b6f6;
+   font-size:35px;
+ }
+.card-text{
+  font-size: 15px;
+}
 
+.modal{
+  margin-top:5%;
+  margin-left:10px;
+}
 
 #one{
   display: none;
 }
 
 #two{
-  margin:5px;
-  padding: 5px;
+  padding:15px 0px;
+  box-shadow: 10px 10px 5px #888888;
+  margin:5px 150px;
+  text-align:left;
+  background-color: #c9f3ef;
+
+}
+
+ #p1{
+   padding-left:10px;
+   margin-bottom: 60px;
+  font-size:30px;
+  font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
+}
+
+ #s1{
+  display:block;
+  margin-top:100px;
+   color:#29b6f6;
+   background-color:black;
+  font-size:40px;
+  font-weight:bold;
+  font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
+   padding-bottom:15px;
+   padding-top:10px;
+}
+ #p2{
+  margin-top:10px;
+  margin-left:25px;
+  text-align: left;
+  font-size:20px;
+  font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
+}
+ #s2{
+  display:block;
+  background-color: #b3b3b3;
+  font-size:30px;
+  font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
 }
 
 .card-title{
   cursor: pointer;
+}
+
+.howto{
+  margin:0px;
+  font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
+  background-color: #b3b3b3;
+}
+.howto > ul{
+  margin:0px;
+  overflow: hidden;
+  padding: 0px;
+  width: 100%;
+}
+.howtoli{
+  margin: 0px;
+  width:49.8%;
+}
+.howtoli > a{
+  font-size: 2em;
+  font-weight: bold;
+  color: black !important;
+}
+howli > a:hover{
+  background-color: black !important;
+  color:whitesmoke !important;
+  text-decoration: none !important;
+}
+
+.steps{
+  background-color: black;
+  padding: 0px;
+  width: 100%;
+  height:300px;
+}
+
+.steps-text{
+  color:whitesmoke;
+  padding-top: 20px;
+  padding-left: 15px;
+  width: 49%;
+  height: 100%;
+  display: inline-block;
+}
+.steps-image{
+  padding-top:3%;
+  padding-left:10%;
+  margin: 0px;
+  width: 50%;
+  height: 100%;
+  display: inline-block;
+}
+.steps-image > img{
+
+  background-color: black;
+  width: 90%;
+  height: 90%;
+}
+
+.carouselh{
+  heigth:60%;
+}
+.carousel img{
+
+
+}
+
+.nodisplay{
+  display:none;
 }
 
 .logo-font{
@@ -124,7 +269,7 @@ section > .input-field > label{
 }
 
 .transparent{
-  background-color:white;
+  background-color:black;
 }
 
 .h70{
@@ -138,6 +283,8 @@ section > .input-field > label{
 .marg0{
   margin: 0px;
 }
+
+
 
 .sm-left-space{
   margin-left: 10px;
@@ -203,7 +350,7 @@ footer{
   color: white;
   /*need more margin on the left of links to accomodate the numbers*/
   padding: 0 10px 0 60px;
-  background: #666;
+  background: black;
   background: linear-gradient(#666, #333);
   position: relative;
 }
@@ -222,12 +369,12 @@ footer{
 
 /*hover/active styles*/
 .breadcrumb a.active, .breadcrumb a:hover{
-  background: #333;
-  background: linear-gradient(#333, #000);
+  background-color: #29b6f6;;
+
 }
 .breadcrumb a.active:after, .breadcrumb a:hover:after {
-  background: #333;
-  background: linear-gradient(135deg, #333, #000);
+  background-color: #29b6f6;;
+
 }
 
 /*adding the arrows for the breadcrumbs using rotated pseudo elements*/
@@ -246,8 +393,8 @@ footer{
   /*we need to prevent the arrows from getting buried under the next link*/
   z-index: 1;
   /*background same as links but the gradient will be rotated to compensate with the transform applied*/
-  background: #666;
-  background: linear-gradient(135deg, #666, #333);
+  background-color: #29b6f6;;
+
   /*stylish arrow design using box shadow*/
   box-shadow:
           2px -2px 0 2px rgba(0, 0, 0, 0.4),
@@ -274,8 +421,8 @@ footer{
   position: absolute;
   top: 0;
   left: 30px;
-  background: #444;
-  background: linear-gradient(#444, #222);
+  background-color: #29b6f6;;
+
   font-weight: bold;
 }
 
@@ -291,5 +438,7 @@ footer{
 }
 .flat a:hover, .flat a.active,
 .flat a:hover:after, .flat a.active:after{
-  background: #9EEB62;
+  background-color: #29b6f6;;
 }
+
+

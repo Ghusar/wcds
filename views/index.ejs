@@ -9,51 +9,71 @@
 </header>
 
 <main>
-    <section class="container-fluid" id="one">
-        <div class="input-field col s6 oneclass">
-            <input id="searchfield" type="text" class="validate">
-            <i class="glyphicon glyphicon-remove"></i>
-            <ul>
-            </ul>
-            <label for="searchfield">Search here</label>
+    <section id="one">
+
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog full-width full-height">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header fixPostion">
+                        <button type="button" class="close" data-dismiss="modal"><span class="font-dhed">&times;</span></button>
+                        <h4 class="modal-title">Search Here</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="input-field  oneclass">
+                            <input id="searchfield" type="text" class="validate">
+                            <ul>
+                            </ul>
+                            <label for="searchfield">Search here</label>
+                        </div>
+                        <div class="breadcrumb flat oneclass">
+                            <button type="button" class="close"><span class="font-dhed pull-right">&times;</span></button>
+                        </div>
+                        <div class="meraoutput">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default close" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
         </div>
-        <div class="breadcrumb flat oneclass">
-        </div>
-        <div class="meraoutput">
-        </div>
+
+
     </section>
     <section id="two">
-        <div class="row">
-            <div class="col s12 m6">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="circle-search-icon.svg">
-                        <span class="card-title">Card Title</span>
+
+        <div>
+            <p id="p1" class="aligc">Confuced about your career path??</p>
+            <div class="aligc"><span><span>Search</span>here</span><i id="searchIcon" class="glyphicon glyphicon-search" data-toggle="modal" data-target="#myModal"></i></div>
+
+            <div class="howto">
+                <div id="s1" class="aligc">How to get started?</div>
+                <ul class="tabs">
+                    <li class="tab col s3 howtoli" data-no = "1"><a href="">Step 1</a></li>
+                    <li class="tab col s3 howtoli" data-no = "2"><a href="">Step 2</a></li>
+                </ul>
+                <div class="steps">
+                    <div class="steps-text">
+                        <h4>How to search:</h4>
+                        <p/>first type your current education achievment in search box or you can also select from suggestions given below search box and then it will show you all possible further studies in which you can go and also it will show you available jobs for your current education level</p>
                     </div>
-                    <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information.
-                            I am convenient because I require little markup to use effectively.</p>
+                    <div class="steps-image">
+                        <img src="step1.PNG" />
                     </div>
-                    <div class="card-action">
-                        <a href="#">This is a link</a>
+                    <div class="steps-text nodisplay">
+                        <h4>Move Further:</h4>
+                        <p/>Once you got all possible further studies and jobs suggetion , you can select from this suggestion to see how much futher you can go and below search box you can see sequence in which you are selecting studies. By this you can set your path to your destination from current education level.</p>
                     </div>
-                </div>
-            </div>
-            <div class="col s12 m6">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="circle-search-icon.svg">
-                        <span class="card-title">Card Title</span>
-                    </div>
-                    <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information.
-                            I am convenient because I require little markup to use effectively.</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="#">This is a link</a>
+                    <div class="steps-image nodisplay">
+                        <img src="step2.PNG" />
                     </div>
                 </div>
+                </div>
             </div>
+
         </div>
     </section>
 </main>
@@ -63,9 +83,10 @@
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 <script src ="/javascripts/custom.js"></script>
 </body>
 </html>
