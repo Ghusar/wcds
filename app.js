@@ -23,7 +23,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 var database = require('./database/index');
 database.connect();
+database.StoreDataInDatabase();
 database.insertTrie();
+
 
 
 app.use('/', routes);

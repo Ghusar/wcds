@@ -1,0 +1,48 @@
+CREATE TABLE IF NOT EXISTS skill (
+  id int(11) NOT NULL DEFAULT 0,
+  name varchar(30) DEFAULT NULL,
+  PRIMARY KEY (id)
+);
+CREATE TABLE IF NOT EXISTS directed_graph (
+  node_from int(11) DEFAULT NULL,
+  node_to int(11) DEFAULT NULL,
+  KEY node_from (node_from),
+  KEY node_to (node_to)
+);
+
+INSERT INTO `skill` (`id`, `name`) VALUES
+(0, 'std_ten'),
+(1, 'std_twelve'),
+(2, 'ict'),
+(3, 'civil'),
+(4, 'mich'),
+(5, 'ictjob1'),
+(6, 'ictjob2'),
+(7, 'ictjob3'),
+(8, 'civiljob1'),
+(9, 'civiljob2'),
+(10, 'civiljob3'),
+(11, 'michjob1'),
+(12, 'michjob2'),
+(13, 'michjob3'),
+(14, '12job1'),
+(15, '12job2'),
+(16, '12job3');
+
+INSERT INTO `directed_graph` (`node_from`, `node_to`) VALUES
+(0, 1),
+(1, 2),
+(1, 3),
+(1, 4),
+(2, 5),
+(2, 6),
+(2, 7),
+(3, 8),
+(3, 9),
+(3, 10),
+(4, 11),
+(4, 12),
+(4, 13),
+(1, 14),
+(1, 15),
+(1, 16);

@@ -8,7 +8,7 @@ database.connect = function () {
         host     : 'localhost',
         user     : 'root',
         password : '',
-        database : 'wtf'
+        database : 'wcds'
     });
 
     connection.connect(function(err){
@@ -18,18 +18,26 @@ database.connect = function () {
             console.log("Error connecting database ... nn");
         }
     });
+
+
 }
 
-
-database.que = function () {
-    connection.query('SELECT * from skill LIMIT 2', function(err, rows, fields) {
-        connection.end();
-        if (!err)
-            console.log('The solution is: ', rows);
-        else
-            console.log('Error while performing Query.');
+database.StoreDataInDatabase = function(){
+    var fs = require('fs');
+    fs.readFile("DataOfDatabase.txt", 'utf8', function(err, data) {
+        if (err) throw err;
+        var array=data.split(";");
+        for(var i=0;i<array.length-1;i++){
+            //console.log(array[i]);
+            connection.query(array[i]+";",function(err,rows) {
+                if (err) {
+                    console.log('done');
+                }
+            });
+        }
     });
 }
+
 
 database.findit = function(input,callback){
     //console.log(input+"input");
